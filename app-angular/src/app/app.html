@@ -1,0 +1,30 @@
+<main>
+  <section>
+    <div>
+      <h1>Chat App in Angular</h1>
+    </div>
+    <form [formGroup]="message" (ngSubmit)="submit()">
+      <label>
+        Name
+        <input type="text" formControlName="name" />
+      </label>
+      <label>
+        Message
+        <input type="text" formControlName="message" />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  @if(allMessages().length > 0) {
+    <section>
+      <div class="messages">
+        @for(message of allMessages(); track $index) {
+          <li>
+            <strong>{{ message.name }}: </strong>
+            <span>{{ message.message }}</span>
+          </li>
+        }
+      </div>
+    </section>
+  }
+</main>

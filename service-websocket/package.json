@@ -1,0 +1,25 @@
+{
+  "name": "service-websocket",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/main.ts",
+    "build": "tsc",
+    "start": "ts-node src/main.ts",
+    "start:prod": "node dist/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.14",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  }
+}
